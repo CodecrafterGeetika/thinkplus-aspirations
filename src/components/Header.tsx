@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,10 +21,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold">
-              <span className="text-foreground">Think</span>
-              <span className="text-primary">Plus</span>
-            </div>
+            <img src={logo} alt="ThinkPlus Education" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

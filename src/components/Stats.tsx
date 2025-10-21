@@ -1,24 +1,27 @@
-import { Users, Clock, Award, GraduationCap } from "lucide-react";
+import studentsIcon from "@/assets/stats/students.png";
+import lecturesIcon from "@/assets/stats/lectures.png";
+import facultyIcon from "@/assets/stats/faculty.png";
+import admissionsIcon from "@/assets/stats/admissions.png";
 
 const Stats = () => {
   const stats = [
     {
-      icon: Users,
+      icon: studentsIcon,
       number: "400+",
       label: "Our Happy Students",
     },
     {
-      icon: Clock,
+      icon: lecturesIcon,
       number: "600 Hrs",
       label: "Dedicated Lectures",
     },
     {
-      icon: Award,
+      icon: facultyIcon,
       number: "10+ Yrs",
       label: "Experienced Faculty",
     },
     {
-      icon: GraduationCap,
+      icon: admissionsIcon,
       number: "47",
       label: "IIM Admissions",
     },
@@ -35,7 +38,6 @@ const Stats = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => {
-            const Icon = stat.icon;
             return (
               <div
                 key={index}
@@ -44,7 +46,7 @@ const Stats = () => {
               >
                 {/* Icon */}
                 <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Icon className="text-primary" size={32} />
+                  <img src={stat.icon} alt={stat.label} className="w-10 h-10 object-contain" />
                 </div>
 
                 {/* Number */}

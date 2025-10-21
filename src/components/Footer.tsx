@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const services = [
@@ -15,10 +16,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}
           <div className="lg:col-span-2 space-y-6">
-            <h3 className="text-2xl font-bold">
-              <span className="text-foreground">Think</span>
-              <span className="text-primary">Plus</span>
-            </h3>
+            <img src={logo} alt="ThinkPlus Education" className="h-12 w-auto" />
             <p className="text-muted-foreground max-w-md">
               Thinkplus Education, an initiative by IIM grads started in the year 2022 to help students prepare for alternate career opportunities. It is focused on building a platform for students to learn and build personalities and profiles.
             </p>

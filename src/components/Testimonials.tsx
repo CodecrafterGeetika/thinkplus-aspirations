@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import bhanuImg from "@/assets/testimonials/bhanu.png";
+import vaishhnaviImg from "@/assets/testimonials/vaishhnavi.png";
+import sahithiImg from "@/assets/testimonials/sahithi.png";
+import mukeshImg from "@/assets/testimonials/mukesh.png";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,31 +15,25 @@ const Testimonials = () => {
       name: "Bhanu Sanjana Nadella",
       achievement: "IPM, IIM Rohtak",
       text: "The faculty members are not only incredibly knowledgeable but also exceptionally supportive and encouraging, making the learning process truly enjoyable.",
+      image: bhanuImg,
     },
     {
       name: "M. Vaishhnavi",
       achievement: "IPM, IIM Bodh Gaya",
       text: "The guidance by all the teachers, the support and all the one on one mentoring sessions which helped me in analysing my strengths and weakness and work according to it. They encouraged me to develop my time management skills.",
+      image: vaishhnaviImg,
     },
     {
       name: "Sahithi Chaganti",
       achievement: "MBA, IIM Udaipur",
       text: "Exceptional mentors not only taught fundamentals but also instilled problem-solving approaches, fostering critical reasoning and analytical thinking. Weekly quizzes and consistent error analysis ensured precise preparation.",
+      image: sahithiImg,
     },
     {
       name: "P. Mukesh",
       achievement: "IPM, IIM Rohtak",
       text: "Thinkplus exceeded expectations. Their creative mock exams boosted my IPMAT confidence, and the faculty were like friendly guides, making learning fun. Mentoring with IIM Rohtak students at Thinkplus was invaluable.",
-    },
-    {
-      name: "Bhavisya Reddy",
-      achievement: "IPM, IIM Jammu",
-      text: "Despite scoring 54/100 in math in class 12 and having a fear of the subject, Thinkplus' 99 Concepts changed everything. Understanding the background of each concept helped me solve problems without relying on formulas.",
-    },
-    {
-      name: "Snehal",
-      achievement: "MBA, IIM Ranchi",
-      text: "Thinkplus' extensive experience in the field provided me with the right direction and insights, ensuring I was well-prepared for my interviews. Thanks to Thinkplus, I felt confident and well-equipped.",
+      image: mukeshImg,
     },
   ];
 
@@ -68,10 +66,12 @@ const Testimonials = () => {
               </p>
 
               <div className="flex items-center gap-4 pt-6 border-t border-border">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary">
-                    {testimonials[currentIndex].name.charAt(0)}
-                  </span>
+                <div className="w-16 h-16 rounded-full overflow-hidden bg-primary/10">
+                  <img 
+                    src={testimonials[currentIndex].image} 
+                    alt={testimonials[currentIndex].name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-foreground">
