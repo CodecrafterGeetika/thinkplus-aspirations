@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTheme } from "@/contexts/ThemeContext";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const services = [
     { name: "CAT", href: "#cat" },
@@ -51,21 +53,31 @@ const Header = () => {
               </div>
             </div>
 
+            <Link to="/mock-test" className="text-foreground hover:text-primary transition-colors">
+              Mock Test
+            </Link>
+            <Link to="/daily-target" className="text-foreground hover:text-primary transition-colors">
+              Daily Target
+            </Link>
             <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">
               Testimonials
             </a>
-            <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
-              Blog
-            </Link>
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button variant="hero" size="lg">
-              Join Now
+          {/* CTA Button & Theme Toggle */}
+          <div className="hidden lg:flex items-center gap-3">
+            <button
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/contact">Join Now</Link>
             </Button>
           </div>
 
@@ -100,17 +112,27 @@ const Header = () => {
                   </a>
                 ))}
               </div>
+              <Link to="/mock-test" className="text-foreground hover:text-primary transition-colors">
+                Mock Test
+              </Link>
+              <Link to="/daily-target" className="text-foreground hover:text-primary transition-colors">
+                Daily Target
+              </Link>
               <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">
                 Testimonials
               </a>
-              <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
-                Blog
-              </Link>
               <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
                 Contact
               </Link>
-              <Button variant="hero" className="w-full">
-                Join Now
+              <button
+                onClick={toggleTheme}
+                className="w-full py-2 px-4 rounded-lg border border-border flex items-center justify-center gap-2 hover:bg-muted transition-colors"
+              >
+                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                {theme === "dark" ? "Light Mode" : "Dark Mode"}
+              </button>
+              <Button variant="hero" className="w-full" asChild>
+                <Link to="/contact">Join Now</Link>
               </Button>
             </nav>
           </div>

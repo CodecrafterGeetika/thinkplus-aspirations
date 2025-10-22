@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
@@ -49,13 +50,17 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group">
-                Explore More
-                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button variant="hero" size="lg" className="group" asChild>
+                <Link to="/mock-test">
+                  Take Mock Test
+                  <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="group">
-                Contact Us
-                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button variant="outline" size="lg" className="group" asChild>
+                <Link to="/contact">
+                  Contact Us
+                  <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -92,25 +97,33 @@ const Hero = () => {
             <div className="mt-8 flex items-center gap-4">
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/people/ThinkPlus-Education/100092544815760/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:border-primary hover:text-primary-foreground transition-all"
                 >
                   <Facebook size={18} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/thinkpluseducation"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:border-primary hover:text-primary-foreground transition-all"
                 >
                   <Instagram size={18} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/thinkplus-education-technologies"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:border-primary hover:text-primary-foreground transition-all"
                 >
                   <Linkedin size={18} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/@ThinkplusMBA/videos"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:border-primary hover:text-primary-foreground transition-all"
                 >
                   <Youtube size={18} />

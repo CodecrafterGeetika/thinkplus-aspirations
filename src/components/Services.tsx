@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import catIcon from "@/assets/cat-icon.png";
 import ipmatIcon from "@/assets/ipmat-icon.png";
 import clatIcon from "@/assets/clat-icon.png";
@@ -68,17 +70,24 @@ const Services = () => {
                   {service.title}
                 </h3>
 
-                <p className="text-muted-foreground line-clamp-4">
+                <p className="text-muted-foreground line-clamp-3">
                   {service.description}
                 </p>
 
-                <a
-                  href={`#${service.id}`}
-                  className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all"
-                >
-                  Learn More
-                  <ArrowRight size={18} />
-                </a>
+                <div className="flex gap-3 pt-2">
+                  <Button variant="outline" size="sm" asChild className="flex-1">
+                    <Link to={`/free-trial?course=${service.title}`}>
+                      <Play size={14} className="mr-2" />
+                      Try Free Demo
+                    </Link>
+                  </Button>
+                  <Button size="sm" asChild className="flex-1">
+                    <Link to="/contact">
+                      Enroll Now
+                      <ArrowRight size={14} className="ml-2" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
 
               {/* Hover Effect */}
