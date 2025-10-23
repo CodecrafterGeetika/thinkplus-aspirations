@@ -26,9 +26,9 @@ const YouTubeVideos = () => {
       thumbnail: "https://img.youtube.com/vi/byuJwZ3nO1E/maxresdefault.jpg",
     },
     {
-      id: "tQO0DExUuI4",
-      title: "Quant Shortcuts & Tips for CAT",
-      thumbnail: "https://img.youtube.com/vi/tQO0DExUuI4/maxresdefault.jpg",
+      id: "U8fiLy9BArU",
+      title: "TS ICET Preparation Strategy - Complete Guide",
+      thumbnail: "https://img.youtube.com/vi/U8fiLy9BArU/maxresdefault.jpg",
     },
     {
       id: "aK0oUvdW_9s",
