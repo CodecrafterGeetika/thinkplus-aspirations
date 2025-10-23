@@ -19,7 +19,7 @@ const MockTest = () => {
   const [testStarted, setTestStarted] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: number]: number }>({});
-  const [timeLeft, setTimeLeft] = useState(3600); // 60 minutes
+  const [timeLeft, setTimeLeft] = useState(240); // 4 minutes
   const [showResults, setShowResults] = useState(false);
 
   const questions: Question[] = [
@@ -62,6 +62,9 @@ const MockTest = () => {
       return () => clearInterval(timer);
     }
     if (timeLeft === 0 && testStarted) {
+      toast.error("Time's Up! Your test has been auto-submitted.", {
+        duration: 5000,
+      });
       handleSubmit();
     }
   }, [testStarted, timeLeft, showResults]);
@@ -122,7 +125,7 @@ const MockTest = () => {
                   <div className="text-sm text-muted-foreground mt-1">Questions</div>
                 </div>
                 <div className="p-4 bg-muted rounded-lg">
-                  <div className="text-3xl font-bold text-primary">60</div>
+                  <div className="text-3xl font-bold text-primary">4</div>
                   <div className="text-sm text-muted-foreground mt-1">Minutes</div>
                 </div>
                 <div className="p-4 bg-muted rounded-lg">
@@ -136,7 +139,7 @@ const MockTest = () => {
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Each question carries equal marks</li>
                   <li>• No negative marking</li>
-                  <li>• Test will auto-submit after 60 minutes</li>
+                  <li>• Test will auto-submit after 4 minutes</li>
                   <li>• You can navigate between questions</li>
                 </ul>
               </div>

@@ -13,22 +13,32 @@ interface Video {
 const YouTubeVideos = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
-  // Sample videos - In production, you'd fetch these from YouTube API
+  // Real Think+ YouTube Channel Videos
   const videos: Video[] = [
     {
-      id: "dQw4w9WgXcQ",
+      id: "dVh4eimqzFk",
       title: "CAT 2025 Preparation Strategy - Complete Guide",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/dVh4eimqzFk/maxresdefault.jpg",
     },
     {
-      id: "dQw4w9WgXcQ",
-      title: "IPMAT Success Tips from IIM Rohtak Student",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      id: "byuJwZ3nO1E",
+      title: "IPMAT Success Tips - IIM Indore & Rohtak",
+      thumbnail: "https://img.youtube.com/vi/byuJwZ3nO1E/maxresdefault.jpg",
     },
     {
-      id: "dQw4w9WgXcQ",
+      id: "tQO0DExUuI4",
+      title: "Quant Shortcuts & Tips for CAT",
+      thumbnail: "https://img.youtube.com/vi/tQO0DExUuI4/maxresdefault.jpg",
+    },
+    {
+      id: "aK0oUvdW_9s",
       title: "CLAT 2025 - How to Score 120+ Marks",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/aK0oUvdW_9s/maxresdefault.jpg",
+    },
+    {
+      id: "bHkqM3yP0O4",
+      title: "Exam Motivation - Stay Focused & Succeed",
+      thumbnail: "https://img.youtube.com/vi/bHkqM3yP0O4/maxresdefault.jpg",
     },
   ];
 
@@ -49,7 +59,7 @@ const YouTubeVideos = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {videos.map((video, index) => (
               <Card
                 key={video.id + index}

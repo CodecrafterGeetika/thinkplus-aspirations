@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
+import JoinModal from "@/components/JoinModal";
 import catIcon from "@/assets/cat-icon.png";
 import ipmatIcon from "@/assets/ipmat-icon.png";
 import clatIcon from "@/assets/clat-icon.png";
@@ -9,6 +11,14 @@ import iqIcon from "@/assets/iq-icon.png";
 import careerIcon from "@/assets/career-icon.png";
 
 const Services = () => {
+  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState("");
+
+  const handleJoinClick = (courseName: string) => {
+    setSelectedCourse(courseName);
+    setIsJoinModalOpen(true);
+  };
+
   const services = [
     {
       id: "cat",
@@ -81,11 +91,13 @@ const Services = () => {
                       Try Free Demo
                     </Link>
                   </Button>
-                  <Button size="sm" asChild className="flex-1">
-                    <Link to="/contact">
-                      Enroll Now
-                      <ArrowRight size={14} className="ml-2" />
-                    </Link>
+                  <Button 
+                    size="sm" 
+                    className="flex-1"
+                    onClick={() => handleJoinClick(service.title)}
+                  >
+                    Enroll Now
+                    <ArrowRight size={14} className="ml-2" />
                   </Button>
                 </div>
               </div>
@@ -96,6 +108,12 @@ const Services = () => {
           ))}
         </div>
       </div>
+
+      <JoinModal
+        isOpen={isJoinModalOpen}
+        onClose={() => setIsJoinModalOpen(false)}
+        courseName={selectedCourse}
+      />
     </section>
   );
 };

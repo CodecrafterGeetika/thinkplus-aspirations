@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import JoinModal from "@/components/JoinModal";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
   const slides = [hero1, hero2, hero3];
 
   useEffect(() => {
@@ -50,11 +52,9 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group" asChild>
-                <Link to="/mock-test">
-                  Take Mock Test
-                  <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+              <Button variant="hero" size="lg" className="group" onClick={() => setIsJoinModalOpen(true)}>
+                Join Now
+                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
                 <Link to="/contact">
@@ -134,6 +134,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <JoinModal
+        isOpen={isJoinModalOpen}
+        onClose={() => setIsJoinModalOpen(false)}
+        courseName="Think+ Premium Courses"
+      />
     </section>
   );
 };
