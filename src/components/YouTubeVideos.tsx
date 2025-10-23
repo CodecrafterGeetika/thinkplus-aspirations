@@ -36,9 +36,9 @@ const YouTubeVideos = () => {
       thumbnail: "https://img.youtube.com/vi/aK0oUvdW_9s/maxresdefault.jpg",
     },
     {
-      id: "bHkqM3yP0O4",
-      title: "Exam Motivation - Stay Focused & Succeed",
-      thumbnail: "https://img.youtube.com/vi/bHkqM3yP0O4/maxresdefault.jpg",
+      id: "CcewluUMmhE",
+      title: "How to Crack AP ICET - Complete Strategy Guide",
+      thumbnail: "https://img.youtube.com/vi/CcewluUMmhE/maxresdefault.jpg",
     },
   ];
 
