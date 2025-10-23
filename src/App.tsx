@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import MockTest from "./pages/MockTest";
 import DailyTarget from "./pages/DailyTarget";
 import FreeTrial from "./pages/FreeTrial";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/mock-test" element={<MockTest />} />
             <Route path="/daily-target" element={<DailyTarget />} />
             <Route path="/free-trial" element={<FreeTrial />} />
+            <Route path="/contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

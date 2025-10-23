@@ -21,7 +21,13 @@ const JoinModal = ({ isOpen, onClose, courseName = "Our Premium Course" }: JoinM
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! Our team will contact you soon.");
+    
+    // Send via WhatsApp
+    const whatsappNumber = "919182527209"; // Think+ contact number
+    const message = `*New Enrollment Request*%0A%0ACourse: ${encodeURIComponent(courseName)}%0AName: ${encodeURIComponent(formData.name)}%0AEmail: ${encodeURIComponent(formData.email)}%0APhone: ${encodeURIComponent(formData.phone)}`;
+    
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+    toast.success("Redirecting to WhatsApp to complete enrollment...");
     setFormData({ name: "", email: "", phone: "" });
     onClose();
   };
