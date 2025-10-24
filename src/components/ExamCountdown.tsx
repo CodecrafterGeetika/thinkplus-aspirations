@@ -14,7 +14,9 @@ const ExamCountdown = () => {
   const exams: Exam[] = [
     { name: "CAT 2025", date: new Date("2025-11-24"), color: "from-red-500 to-pink-500" },
     { name: "XAT 2026", date: new Date("2026-01-05"), color: "from-blue-500 to-cyan-500" },
-    { name: "NMAT 2025", date: new Date("2025-10-10"), color: "from-purple-500 to-indigo-500" },
+    { name: "NMAT 2026", date: new Date("2026-10-10"), color: "from-purple-500 to-indigo-500" },
+    { name: "AP ICET 2025", date: new Date("2025-05-20"), color: "from-green-500 to-emerald-500" },
+    { name: "TS ICET 2025", date: new Date("2025-05-28"), color: "from-orange-500 to-amber-500" },
   ];
 
   const [countdowns, setCountdowns] = useState<{ [key: string]: { days: number; hours: number; minutes: number; seconds: number } }>({});
