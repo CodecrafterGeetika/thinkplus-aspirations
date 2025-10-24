@@ -16,9 +16,9 @@ const YouTubeVideos = () => {
   // Real Think+ YouTube Channel Videos
   const videos: Video[] = [
     {
-      id: "dVh4eimqzFk",
+      id: "CVbyIwpaQTo",
       title: "CAT 2025 Preparation Strategy - Complete Guide",
-      thumbnail: "https://img.youtube.com/vi/dVh4eimqzFk/maxresdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/CVbyIwpaQTo/maxresdefault.jpg",
     },
     {
       id: "byuJwZ3nO1E",
