@@ -31,11 +31,6 @@ const YouTubeVideos = () => {
       thumbnail: "https://img.youtube.com/vi/U8fiLy9BArU/maxresdefault.jpg",
     },
     {
-      id: "aK0oUvdW_9s",
-      title: "CLAT 2025 - How to Score 120+ Marks",
-      thumbnail: "https://img.youtube.com/vi/aK0oUvdW_9s/maxresdefault.jpg",
-    },
-    {
       id: "CcewluUMmhE",
       title: "How to Crack AP ICET - Complete Strategy Guide",
       thumbnail: "https://img.youtube.com/vi/CcewluUMmhE/maxresdefault.jpg",
