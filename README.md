@@ -46,7 +46,7 @@ Think+ is a modern, AI-enhanced educational platform designed to revolutionize e
 - **Icons**: Lucide React
 - **Animations**: Tailwind CSS animations + custom transitions
 
-## 🎯 Hackathon Highlights
+## 🎯 Highlights
 
 ### Innovation
 - **AI Integration**: Implemented intelligent chatbot without backend dependency
