@@ -2,8 +2,7 @@
 
 **AI-Powered Exam Preparation Platform for CAT, CLAT & IPMAT**
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://lovable.dev/projects/c5c69ec2-fa70-4c80-9f79-9dd3e5815dd9)
-[![Built with Lovable](https://img.shields.io/badge/Built%20with-Lovable-ff69b4)](https://lovable.dev)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-success)]
 
 ## 🚀 Overview
 
