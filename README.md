@@ -135,10 +135,7 @@ Think+ uses a sophisticated design system with:
 5. **Scalability**: Architecture ready for production deployment
 6. **Complete Product**: Not just a demo - a production-ready platform
 
-## 📞 Contact & Support
-
-- **Website**: [Think+ Official](https://lovable.dev/projects/c5c69ec2-fa70-4c80-9f79-9dd3e5815dd9)
-- **AI Assistant**: Available 24/7 via chatbot on the platform
+##https://thinkplus-aspirations.lovable.app/
 
 ## 📄 License
 
