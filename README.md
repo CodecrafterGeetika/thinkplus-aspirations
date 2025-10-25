@@ -146,4 +146,4 @@ Built with ❤️ for students preparing for competitive exams in India.
 
 ---
 
-**Built for Think+ Hackathon 2025** | React + TypeScript + AI
+**Built for Think+ Hackathon 2025 ** | React + TypeScript + AI
