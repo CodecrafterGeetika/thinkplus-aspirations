@@ -120,7 +120,7 @@ Think+ uses a sophisticated design system with:
 
 ## 📈 Future Enhancements
 
-- **Backend Integration**: Full Lovable Cloud integration for user accounts
+- **Backend Integration**: Full Cloud integration for user accounts
 - **Advanced AI**: Enhanced chatbot with memory and personalization
 - **Live Classes**: Real-time video streaming integration
 - **Progress Analytics**: Detailed performance tracking and insights
