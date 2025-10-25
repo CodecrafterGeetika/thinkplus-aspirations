@@ -66,7 +66,8 @@ const FreeTrial = () => {
                       </div>
                       <Button
                         size="sm"
-                        onClick={() => lesson.type === "video" && setSelectedVideo("dQw4w9WgXcQ")}
+                        variant="outline"
+                        disabled
                       >
                         <Play size={14} className="mr-2" />
                         Watch Now
