@@ -8,6 +8,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Blogs from "@/components/Blogs";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <Testimonials />
       </main>
       <Footer />
+      <ChatBot />
     </div>
   );
 };
