@@ -21,11 +21,6 @@ const YouTubeVideos = () => {
       thumbnail: "https://img.youtube.com/vi/CVbyIwpaQTo/maxresdefault.jpg",
     },
     {
-      id: "byuJwZ3nO1E",
-      title: "IPMAT Success Tips - IIM Indore & Rohtak",
-      thumbnail: "https://img.youtube.com/vi/byuJwZ3nO1E/maxresdefault.jpg",
-    },
-    {
       id: "U8fiLy9BArU",
       title: "TS ICET Preparation Strategy - Complete Guide",
       thumbnail: "https://img.youtube.com/vi/U8fiLy9BArU/maxresdefault.jpg",
